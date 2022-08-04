@@ -23,10 +23,9 @@ const Navbar = () => {
               display: 'block',
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
             }}
           >
-            <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/?page=1">
+            <Link style={{ color: 'steelblue', textDecoration: 'none' }} to="/?page=1">
               YuGiOh
             </Link>
           </Typography>

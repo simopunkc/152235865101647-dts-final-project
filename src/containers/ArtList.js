@@ -53,35 +53,11 @@ const ArtList = () => {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            mt: 5,
+            mt: 10,
+            ml: '1%',
+            mr: '1%'
         }}>
-            <Box sx={{
-                mt: 5,
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'flex-end',
-                alignItems: 'center',
-            }}>
-                Pagination
-                <Button
-                    variant="contained"
-                    sx={{ ml: 2 }}
-                    onClick={() => setPagination(1)}
-                >
-                    Next Page
-                </Button>
-                <Button
-                    variant="contained"
-                    sx={{ ml: 2, mr: 2 }}
-                    onClick={() => setPagination(-1)}
-                >
-                    Prev Page
-                </Button>
-            </Box>
-            <Box sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
+            <Box className='row' sx={{
                 justifyContent: 'space-between',
             }}>
                 {
@@ -89,6 +65,31 @@ const ArtList = () => {
                         <ArtCard key={art.id + art.type} art={art}></ArtCard>
                     ))
                 }
+            </Box>
+            <Box sx={{
+                mt: 10,
+                mb: 5,
+                display: 'flex',
+                flexDirection: 'row',
+                textAlign: 'center',
+                alignItems: 'center',
+                ml: 'auto',
+                mr: 'auto',
+            }}>
+                <Button
+                    variant="contained"
+                    sx={{ ml: 2, mr: 2, color: '#aaa' }}
+                    onClick={() => setPagination(-1)}
+                >
+                    Prev Page
+                </Button>
+                <Button
+                    variant="contained"
+                    sx={{ ml: 2, mr: 2, color: '#aaa' }}
+                    onClick={() => setPagination(1)}
+                >
+                    Next Page
+                </Button>
             </Box>
         </Box>
     );

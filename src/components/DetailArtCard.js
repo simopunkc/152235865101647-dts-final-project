@@ -6,21 +6,21 @@ import * as React from 'react';
 
 const DetailArtCard = ({ art }) => {
   return (
-    <Card id={art.id} sx={{ backgroundColor: 'antiquewhite', padding: 5, maxWidth: '80%', mt: 15, mb: 5, ml: 'auto', mr: 'auto' }}>
+    <Card className='rowDetail' id={art.id} sx={{ backgroundColor: '#444', padding: 5, mt: 15, mb: 5, ml: 5, mr: 5 }}>
       <CardMedia
         component="img"
-        sx={{ width: '100%', height: 480, objectFit: 'contain' }}
-        image={art.card_images[0].image_url !== "" ? `${art.card_images[0].image_url}` : 'https://via.placeholder.com/360x480'}
+        sx={{ objectFit: 'contain' }}
+        image={art.card_images[0].image_url !== "" ? `${art.card_images[0].image_url}` : 'https://via.placeholder.com/421x614'}
         alt={art.name}
       />
       <CardContent sx={{ textAlign: 'center' }}>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" color="tan" component="div">
           {art.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="#ccc">
           {art.desc}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="#ccc">
           Type: {art.type}
         </Typography>
       </CardContent>

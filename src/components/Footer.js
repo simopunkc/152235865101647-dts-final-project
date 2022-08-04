@@ -8,8 +8,10 @@ const Footer = () => {
       <Typography
         variant="h6"
         sx={{
-          backgroundColor: 'lemonchiffon',
+          backgroundColor: '#222',
           flexGrow: 1,
+          color: 'darkseagreen',
+          fontSize: '14px',
           textAlign: 'center',
           padding: 5,
           display: 'block',

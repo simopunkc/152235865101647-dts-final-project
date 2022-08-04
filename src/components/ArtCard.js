@@ -5,16 +5,16 @@ import { NavLink } from 'react-router-dom';
 
 const ArtCard = ({ art }) => {
   return (
-    <NavLink to={`/arts/${art.id}`} key={art.id} sx={{ textDecoration: 'none' }}>
-      <Card id={art.id} sx={{ display: 'flex', backgroundColor: 'lemonchiffon', margin: 5 }}>
+    <Card className='column' id={art.id} sx={{ mt: 2, backgroundColor: '#444', textAlign: 'center' }}>
+      <NavLink to={`/arts/${art.id}`} key={art.id} sx={{ textDecoration: 'none' }}>
         <CardMedia
           component="img"
-          sx={{ width: 150, height: 225, objectFit: 'cover' }}
-          image={art.card_images[0].image_url_small !== "" ? `${art.card_images[0].image_url_small}` : 'https://via.placeholder.com/150x225'}
+          sx={{ objectFit: 'cover' }}
+          image={art.card_images[0].image_url !== "" ? `${art.card_images[0].image_url}` : 'https://via.placeholder.com/421x614'}
           alt="Art poster"
         />
-      </Card>
-    </NavLink>
+      </NavLink>
+    </Card>
   );
 }
 
